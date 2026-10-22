@@ -18,14 +18,48 @@ Your HALO internet bridge must remain online and associated with your HALO accou
 
 Bluetooth on the Android phone is used for the initial setup. Once the bridge is configured, this Home Assistant integration sends lamp commands through Avi-on cloud and the bridge. The phone does not need to stay connected to Home Assistant or to the lamps for normal Home Assistant control. Keep the bridge powered and connected to the internet.
 
-## Install and connect Home Assistant
+## Installation
 
-1. Copy `custom_components/halo_home_bridge` to `/config/custom_components/halo_home_bridge`.
-2. Restart Home Assistant.
-3. Open Settings → Devices & services → Add integration → **HALO Home Bridge**.
-4. Enter the same email and password used in your HALO Home phone app.
-5. If there is only one location with supported lamps, setup selects it automatically and skips the location page. If there are multiple locations, select the one containing the lamps connected to your bridge.
+Complete the [Android phone, lamps, and bridge setup](#first-time-setup-android-phone-lamps-and-bridge) first. Then choose an installation method below.
 
+### Manual installation (available now)
+
+1. Sign in to GitHub with an account that has access to this repository, then open the [latest release](https://github.com/johanolfert/halo-home-bridge/releases/latest).
+2. Download the attached `halo-home-bridge-0.2.5.zip` file and extract it.
+3. Copy the extracted `custom_components/halo_home_bridge` folder into your Home Assistant configuration directory. The final path must be `/config/custom_components/halo_home_bridge/manifest.json`. Create `custom_components` if it does not exist.
+4. Restart Home Assistant, then continue with [Configuration](#configuration).
+
+For an update, back up your existing integration folder, replace it with the new version, and restart Home Assistant.
+
+### HACS custom repository (requires a public repository)
+
+[![HACS custom repository](https://img.shields.io/badge/HACS-CUSTOM-orange.svg)](https://www.hacs.dev/docs/faq/custom_repositories/)
+
+**This repository is currently private. HACS only supports public GitHub repositories, so use manual installation above for now.** The HACS instructions and shortcut below apply if the repository is made public. See the [HACS repository requirements](https://www.hacs.dev/docs/publish/start/).
+
+With [HACS](https://www.hacs.dev/) installed and configured, use the button below or follow the [custom repository instructions](https://www.hacs.dev/docs/faq/custom_repositories/):
+
+[![Open your Home Assistant instance and open a repository inside HACS.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?repository=1429885287&owner=johanolfert&category=integration)
+
+1. Open **HACS → ⋮ → Custom repositories**.
+2. Enter `https://github.com/johanolfert/halo-home-bridge` and select **Integration** as the type.
+3. Add the repository, open **HALO Home Bridge**, and download it.
+4. Restart Home Assistant, then continue with Configuration below.
+
+The shortcut requires [My Home Assistant](https://my.home-assistant.io/) to point to your Home Assistant instance. This is a custom repository, not a listing in the default HACS catalog.
+
+## Configuration
+
+After installing and restarting, open **Settings → Devices & services → Add integration → HALO Home Bridge**, or use this shortcut:
+
+[![Open your Home Assistant instance and start setting up a new integration.](https://my.home-assistant.io/badges/config_flow_start.svg)](https://my.home-assistant.io/redirect/config_flow_start/?domain=halo_home_bridge)
+
+1. Enter the same email and password you use in the **HALO Home Android app**.
+2. If your account has one location with supported lamps, setup selects it automatically. If there are multiple locations, select the location containing your bridge and lamps.
+3. Finish setup. Your supported lamps and HALO groups will be added to Home Assistant.
+4. Check that the bridge indicator shows **Online**, then test on/off, brightness, and color temperature on a lamp.
+
+No bridge IP address or Bluetooth adapter is required in Home Assistant. If the integration does not appear in the Add integration list, confirm the folder path above and restart Home Assistant. If no lamps are found, confirm that the lamps and bridge belong to the same account and location in the Android app.
 
 The password is used to obtain a session and is not saved by this integration. Session and refresh tokens are stored in Home Assistant's configuration storage. Sign in again when the cloud refresh token expires.
 
