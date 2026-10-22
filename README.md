@@ -6,7 +6,19 @@ Transport: Home Assistant → Avi-on HTTPS cloud API → HALO internet bridge �
 
 Your HALO internet bridge must remain online and associated with your HALO account. Its IP is not an API endpoint and is not entered in this integration. Cloud commands target an account location; with one bridge in that location, they use that bridge. This integration cannot pin a cloud command to a particular LAN IP or verify that address from the cloud API.
 
-## Installation and setup
+## First-time setup: Android phone, lamps, and bridge
+
+**Set up the HALO Home lamps and internet bridge (dongle) in the HALO Home Android app before installing this integration.** Home Assistant uses that existing setup; it does not pair the lamps or provision the bridge.
+
+1. Power on the HALO Home LED lamps and the HALO internet bridge.
+2. On your Android phone, open the HALO Home app and sign in to your HALO Home account. Enable Bluetooth and grant the permissions requested for discovering nearby HALO devices.
+3. Follow the app's setup instructions to add the LED lamps to your account's location. Check that you can switch them on and off and adjust their brightness from the phone.
+4. Follow the app's instructions to add the internet bridge to the **same account and location** as the lamps, and connect the bridge to your home network. Finish setup until the bridge is online and remote lamp control works.
+5. To check the bridge connection, turn off Bluetooth on your phone and try controlling a lamp through the app's remote connection. If it does not work, finish or troubleshoot the bridge setup in the phone app before continuing with Home Assistant.
+
+Bluetooth on the Android phone is used for the initial setup. Once the bridge is configured, this Home Assistant integration sends lamp commands through Avi-on cloud and the bridge. The phone does not need to stay connected to Home Assistant or to the lamps for normal Home Assistant control. Keep the bridge powered and connected to the internet.
+
+## Install and connect Home Assistant
 
 1. Copy `custom_components/halo_home_bridge` to `/config/custom_components/halo_home_bridge`.
 2. Restart Home Assistant.
