@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="custom_components/halo_home_bridge/brand/icon@2x.png" alt="HALO Home app logo" width="128" height="128">
+</p>
+
 # HALO Home Bridge for Home Assistant
 
 Controls HALO Home lamps through the existing internet access bridge. Home Assistant uses **no Bluetooth adapter, Bluetooth proxy, or direct lamp connection**.
