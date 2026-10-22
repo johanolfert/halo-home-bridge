@@ -39,7 +39,7 @@ For an update, back up your existing integration folder, replace it with the new
 
 With [HACS](https://www.hacs.dev/) installed and configured, use the button below or follow the [custom repository instructions](https://www.hacs.dev/docs/faq/custom_repositories/):
 
-[![Open your Home Assistant instance and open a repository inside HACS.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?repository=1429885287&owner=johanolfert&category=integration)
+[![Open your Home Assistant instance and open a repository inside HACS.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=johanolfert&repository=halo-home-bridge&category=integration)
 
 1. Open **HACS → ⋮ → Custom repositories**.
 2. Enter `https://github.com/johanolfert/halo-home-bridge` and select **Integration** as the type.
@@ -127,4 +127,5 @@ After setup, switch off Bluetooth on your phone and control one lamp from Home A
 - [Avi-on public cloud API guide](https://avi-on.com/wp-content/uploads/pdf/install-guides/Cloud-Public-API.pdf)
 - [HALO HWB1 specifications](https://www.cooperlighting.com/api/assets/v1/file/CLS/content/6c05d99cda7b4f918bcaad41007e0e53/HALO-Home-Internet-Access-Bridge-Spec-Sheet.pdf)
 - [Home Assistant light entity API](https://developers.home-assistant.io/docs/core/entity/light/)
+
 
