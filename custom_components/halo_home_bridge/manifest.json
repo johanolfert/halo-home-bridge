@@ -1,0 +1,14 @@
+{
+  "domain": "halo_home_bridge",
+  "name": "HALO Home Bridge",
+  "version": "0.2.5",
+  "dependencies": ["frontend"],
+  "config_flow": true,
+  "documentation": "https://avi-on.com/wp-content/uploads/pdf/install-guides/Cloud-Public-API.pdf",
+  "iot_class": "cloud_polling",
+  "integration_type": "hub",
+  "requirements": [],
+  "codeowners": []
+}
+
+

@@ -1,0 +1,11 @@
+__pycache__/
+research/
+.venv/
+*.zip
+
+*.jpg
+*.jpeg
+.storage/
+.env
+.env.*
+

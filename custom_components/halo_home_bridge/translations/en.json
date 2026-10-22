@@ -1,0 +1,49 @@
+{
+  "title": "HALO Home Bridge",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Connect your HALO internet bridge",
+        "description": "Sign in with your HALO Home account. All commands use Avi-on cloud and your existing internet bridge. Home Assistant never connects to lamps through Bluetooth. Your password is used only to sign in.",
+        "data": {
+          "email": "HALO account email",
+          "password": "HALO account password"
+        }
+      },
+      "location": {
+        "title": "Select your bridge location",
+        "description": "Choose the account location containing lamps connected to your HALO bridge. The bridge must be online. The cloud API identifies a location rather than a bridge IP address.",
+        "data": {
+          "location_id": "Location ID"
+        }
+      },
+      "reauth_confirm": {
+        "title": "Sign in again",
+        "description": "Your HALO session expired. Enter your account password to reconnect through the bridge.",
+        "data": {
+          "password": "HALO account password"
+        }
+      }
+    },
+    "error": {
+      "invalid_auth": "The HALO email or password was rejected.",
+      "cannot_connect": "Cannot connect to the Avi-on API, or its response is unsupported.",
+      "no_lights": "No supported lamps with a location were found in this account."
+    },
+    "abort": {
+      "already_configured": "This account location is already configured.",
+      "reauth_successful": "HALO Home was reconnected."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Bridge settings",
+        "description": "Set how often Home Assistant reads lamp state. Use CCT presets and sliders on each device page. Existing HALO schedules remain in the phone app.",
+        "data": {
+          "poll_seconds": "State polling interval (seconds)"
+        }
+      }
+    }
+  }
+}
