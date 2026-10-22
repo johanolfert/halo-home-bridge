@@ -29,7 +29,7 @@ Complete the [Android phone, lamps, and bridge setup](#first-time-setup-android-
 ### Manual installation
 
 1. Open the [latest release](https://github.com/johanolfert/halo-home-bridge/releases/latest).
-2. Download the attached `halo-home-bridge-0.2.5.zip` file and extract it.
+2. Download the attached `halo-home-bridge-x.x.x.zip` file and extract it (`x.x.x` is the release version).
 3. Copy the extracted `custom_components/halo_home_bridge` folder into your Home Assistant configuration directory. The final path must be `/config/custom_components/halo_home_bridge/manifest.json`. Create `custom_components` if it does not exist.
 4. Restart Home Assistant, then continue with [Configuration](#configuration).
 
