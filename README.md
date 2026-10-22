@@ -22,20 +22,20 @@ Bluetooth on the Android phone is used for the initial setup. Once the bridge is
 
 Complete the [Android phone, lamps, and bridge setup](#first-time-setup-android-phone-lamps-and-bridge) first. Then choose an installation method below.
 
-### Manual installation (available now)
+### Manual installation
 
-1. Sign in to GitHub with an account that has access to this repository, then open the [latest release](https://github.com/johanolfert/halo-home-bridge/releases/latest).
+1. Open the [latest release](https://github.com/johanolfert/halo-home-bridge/releases/latest).
 2. Download the attached `halo-home-bridge-0.2.5.zip` file and extract it.
 3. Copy the extracted `custom_components/halo_home_bridge` folder into your Home Assistant configuration directory. The final path must be `/config/custom_components/halo_home_bridge/manifest.json`. Create `custom_components` if it does not exist.
 4. Restart Home Assistant, then continue with [Configuration](#configuration).
 
 For an update, back up your existing integration folder, replace it with the new version, and restart Home Assistant.
 
-### HACS custom repository (requires a public repository)
+### HACS custom repository (recommended)
 
 [![HACS custom repository](https://img.shields.io/badge/HACS-CUSTOM-orange.svg)](https://www.hacs.dev/docs/faq/custom_repositories/)
 
-**This repository is currently private. HACS only supports public GitHub repositories, so use manual installation above for now.** The HACS instructions and shortcut below apply if the repository is made public. See the [HACS repository requirements](https://www.hacs.dev/docs/publish/start/).
+Install through HACS as a custom repository to manage downloads and updates. This repository is public and can be accessed by HACS without a separate GitHub sign-in for this project.
 
 With [HACS](https://www.hacs.dev/) installed and configured, use the button below or follow the [custom repository instructions](https://www.hacs.dev/docs/faq/custom_repositories/):
 
@@ -127,5 +127,3 @@ After setup, switch off Bluetooth on your phone and control one lamp from Home A
 - [Avi-on public cloud API guide](https://avi-on.com/wp-content/uploads/pdf/install-guides/Cloud-Public-API.pdf)
 - [HALO HWB1 specifications](https://www.cooperlighting.com/api/assets/v1/file/CLS/content/6c05d99cda7b4f918bcaad41007e0e53/HALO-Home-Internet-Access-Bridge-Spec-Sheet.pdf)
 - [Home Assistant light entity API](https://developers.home-assistant.io/docs/core/entity/light/)
-
-
